@@ -15,7 +15,7 @@
 
       <div>
         <input placeholder="contact"  class = "bigger" v-model="contact">
-        <input type="email" placeholder="email" class = "bigger" v-model="email">
+        <input type="email" placeholder="email" class = "bigger" v-model="password">
       </div>
 
 

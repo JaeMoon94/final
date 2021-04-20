@@ -3,6 +3,7 @@
 
 <header>
   <div class="header">
+    <h1><span>BlackJack</span></h1>
   </div>
 </header>
 
@@ -224,7 +225,7 @@ export default {
                     this.$root.$data.profile = response.data.profile;
                 }
                 catch(error) {
-                    
+                    return;
                 }
             document.getElementById("playerCards").innerHTML += "<div class=\"result\"><h2>BUST</h2></div>"
             document.getElementById("playerCards").classList.replace("hidden", "show");
@@ -304,7 +305,7 @@ export default {
                     this.$root.$data.profile = response.data.profile;
                 }
                 catch(error) {
-                    
+                    return
                 }
                 document.getElementById("dealerCards").classList.add("dealerboxdisplay")
                 document.getElementById("dealerCards").innerHTML+= "<div class=\"result\"><h2>  WIN  </h2></div>"
@@ -322,7 +323,7 @@ export default {
                     this.$root.$data.profile = response.data.profile;
                 }
                 catch(error) {
-                    
+                    return
                 }
                 document.getElementById("dealerCards").classList.add("dealerboxdisplay")
                 document.getElementById("dealerCards").innerHTML+= "<div class=\"result\"><h2>  LOSE  </h2></div>"
@@ -338,7 +339,7 @@ export default {
                     this.$root.$data.profile = response.data.profile;
                 }
                 catch(error) {
-                   
+                    return
                 }
                 document.getElementById("dealerCards").classList.add("dealerboxdisplay")
                 document.getElementById("dealerCards").innerHTML+= "<div class=\"result\"><h2>  TIE  </h2></div>"
@@ -357,7 +358,7 @@ export default {
                     this.$root.$data.profile = response.data.profile;
                 }
                 catch(error) {
-                    
+                    return
                 }
             document.getElementById("dealerCards").classList.add("dealerboxdisplay")
             document.getElementById("dealerCards").innerHTML+= "<div class=\"result\"><h2>  BUST  </h2></div>"

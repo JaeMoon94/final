@@ -10,7 +10,7 @@ app.use(bodyParser.urlencoded({
 }));
 
 // connect to the database
-mongoose.connect('mongodb://localhost:27017/final', {
+mongoose.connect('mongodb://localhost:27017/blackjack', {
     useUnifiedTopology: true,
     useNewUrlParser: true
 });
@@ -48,7 +48,6 @@ try {
     this.password = hash;
     next();
 } catch (error) {
-    console.log(error);
     next(error);
 }
 });
@@ -106,7 +105,7 @@ app.post('/api/users', async (req, res) => {
         username: req.body.username,
         password: req.body.password,
         contact : req.body.contact,
-        email : req.body.email
+        email : req.body
       });
       await user.save();
       // send back a 200 OK response, along with the user that was created
@@ -124,7 +123,6 @@ app.post('/api/users', async (req, res) => {
         profile: profile
       });
     } catch (error) {
-      console.log(error);
       return res.sendStatus(500);
     }
   });
@@ -161,7 +159,6 @@ app.post('/api/users', async (req, res) => {
         profile: profile
       });
     } catch (error) {
-      console.log(error);
       return res.sendStatus(500);
     }
   });
@@ -173,7 +170,6 @@ app.get('/api/users', async (req, res) => {
     let profiles = await Profile.find();
     res.send(profiles);
   } catch (error) {
-    console.log(error);
     res.sendStatus(500);
   }
 });
@@ -189,7 +185,6 @@ app.delete('/api/users/:username', async (req, res) => {
     })
     res.sendStatus(200);
   } catch (error) {
-    console.log(error);
     res.sendStatus(500);
   }
 });
@@ -231,7 +226,6 @@ app.put('/api/users/:username', async (req,res) => {
         profile: profile
       });
   } catch(error) {
-    console.log(error);
     res.sendStatus(500)
   }
 });
