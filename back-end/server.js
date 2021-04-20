@@ -10,7 +10,7 @@ app.use(bodyParser.urlencoded({
 }));
 
 // connect to the database
-mongoose.connect('mongodb://localhost:27017/blackjack', {
+mongoose.connect('mongodb://localhost:27017/final', {
     useUnifiedTopology: true,
     useNewUrlParser: true
 });
