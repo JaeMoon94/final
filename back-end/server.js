@@ -105,7 +105,7 @@ app.post('/api/users', async (req, res) => {
         username: req.body.username,
         password: req.body.password,
         contact : req.body.contact,
-        email : req.body
+        eamil : req.body.email
       });
       await user.save();
       // send back a 200 OK response, along with the user that was created

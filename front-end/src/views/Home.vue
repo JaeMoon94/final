@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-  <p>Wlecom to our Jack site</p>
+  <p>Wlecom</p>
   <p>Kindly Elon Musk left a comment on my website</p>
   <video width="400" height="400" controls>
     <source src="../assets/elon.mp4" type="video/mp4">

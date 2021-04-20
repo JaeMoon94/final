@@ -76,7 +76,7 @@ export default {
       this.$root.$data.profile = response.data.profile;
       }
       catch(error) {
-        return
+        console.log(error)
       }
     },
     async editAccount() {
@@ -96,6 +96,7 @@ export default {
     this.edit = false;
   },
   async resetStats() {
+    console.log("resetting")
 	this.error = '';
 	try {
 		let response = await axios.put("/api/users/" + this.$root.$data.user.username, {
@@ -103,6 +104,7 @@ export default {
       ties: 0,
 			losses: 0
     });
+    console.log(response)
 		this.$root.$data.user = response.data.user;
 		this.$root.$data.profile = response.data.profile;
 	} catch (error) {
@@ -111,6 +113,7 @@ export default {
 	this.$router.push("/")
 },
   SignOut() {
+      console.log("sign out attempted")
       this.$root.$data.user = null;
   },
   deleteAccount() {
@@ -120,23 +123,23 @@ export default {
       this.$router.push("/")
     }
     catch(error) {
-      return
+      console.log(error)
     }
   },
   async withdraw() {
     try {
-      // console.log('/api/users/' + this.$root.$data.user.username)
+      console.log('/api/users/' + this.$root.$data.user.username)
       let response = await axios.put('/api/users/' + this.$root.$data.user.username, {
         balance: 0,
         totalDeposited: 0,
       });
-      // console.log(response)
+      console.log(response)
       this.$root.$data.user = response.data.user;
       this.$root.$data.profile = response.data.profile;
       this.$router.push("/")
     }
     catch(error) {
-      return
+      console.log(error)
     }
   }
 }

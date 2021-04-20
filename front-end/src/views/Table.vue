@@ -225,7 +225,7 @@ export default {
                     this.$root.$data.profile = response.data.profile;
                 }
                 catch(error) {
-                    return;
+                    return
                 }
             document.getElementById("playerCards").innerHTML += "<div class=\"result\"><h2>BUST</h2></div>"
             document.getElementById("playerCards").classList.replace("hidden", "show");

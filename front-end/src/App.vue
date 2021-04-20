@@ -4,12 +4,15 @@
 
       <router-link to="/" class="Home">Home</router-link><span v-if="!this.$root.login">|</span>
       <router-link to="/Table" v-if="!this.$root.login">Black Jack</router-link><span v-if="!this.$root.login">|</span>
-      <!-- <router-link to="/Leaderboard" v-if="!this.$root.login" >Leaderboard</router-link><span v-if="!this.$root.login">|</span> -->
       <router-link to="/UserDetails" v-if="!this.$root.login" >User Details</router-link>
       <router-link to="/Login" v-if="this.$root.login" style="float:right;">Login</router-link>
       <a href="/" style="float:right;" v-if="!this.$root.login" v-on:click = "SignOut()"> Sign Out</a>
       </div>
       <router-view/>
+
+      <footer>
+        <a href="https://github.com/JaeMoon94/final">github</a>
+      </footer>
 
   </div>
 </template>
@@ -21,7 +24,6 @@ export default {
   },
   methods: {
     SignOut() {
-      console.log("sign out attempted")
       this.user = null;
     }
   }
@@ -39,8 +41,8 @@ footer {
   border-top: 5px solid yellow;
   border-bottom: 5px solid yellow;
   text-align: center;
-  font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif;
   color: yellow;
+  font-size: 40px;
 
 }
 
