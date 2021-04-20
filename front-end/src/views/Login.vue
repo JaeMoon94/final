@@ -55,7 +55,6 @@ export default {
       username: "",
       password: "",
       contact:"",
-      email:"",
       usernameLogin: "",
       passwordLogin: "",
       error: "",
@@ -73,7 +72,7 @@ export default {
       this.registerReady = false;
       this.error = '';
       this.errorLogin = '';
-      if (!this.firstName || !this.lastName || !this.username || !this.password|| !this.email|| !this.contact) {
+      if (!this.firstName || !this.lastName || !this.username || !this.password|| !this.contact) {
         this.registerReady = true;
         return;
       }
@@ -84,7 +83,6 @@ export default {
           username: this.username,
           password: this.password,
           contact: this.contact,
-          email: this.email,
         });
         this.$root.$data.user = response.data.user;
         this.$root.$data.profile = response.data.profile;
@@ -98,7 +96,6 @@ export default {
       this.lastName = ""
       this.username = ""
       this.password = ""
-      this.email = ""
       this.contact = ""
       this.registerReady = true
     },
