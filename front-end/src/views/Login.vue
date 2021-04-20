@@ -14,8 +14,7 @@
       </div>
 
       <div>
-        <input placeholder="contact"  class = "bigger" v-model="contact">
-        <input type="email" placeholder="email" class = "bigger" v-model="email">
+        <input placeholder="contact/email"  class = "bigger" v-model="contact">
       </div>
 
 
@@ -137,7 +136,7 @@ h1 {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #b08a4f;
+  color: blakc;
   margin-bottom: 20px;
   background-color: greenyellow;
   padding: 10px;
@@ -149,7 +148,7 @@ h2 {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #b08a4f;
+  color: black;
   margin-bottom: 20px;
 }
 

@@ -6,6 +6,7 @@
           <ul class = "information">
       <li> Name: {{this.$root.$data.user.firstname}} {{this.$root.$data.user.lastname}}</li>
       <li>Username: {{this.$root.$data.user.username}} </li>
+      <li>User Contact : {{this.$root.$data.user.contact}} </li>
       <br>
       <li class = "money" > Current Balance: </li>
       <li class = "money"> <strong>${{this.$root.$data.profile.balance}}</strong></li>
